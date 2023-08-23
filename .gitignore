@@ -1,0 +1,22 @@
+.vs
+Super Mario Bros/.vs
+Super Mario Bros/*.csproj
+Super Mario Bros/*.unityproj
+Super Mario Bros/*.sln
+Super Mario Bros/*.suo
+Super Mario Bros/*.tmp
+Super Mario Bros/*.user
+Super Mario Bros/*.userprefs
+Super Mario Bros/*.pidb
+Super Mario Bros/*.booproj
+Super Mario Bros/*.svd
+Super Mario Bros/*.pdb
+Super Mario Bros/*.mdb
+Super Mario Bros/*.opendb
+Super Mario Bros/*.VC.db
+
+Super Mario Bros/Temp/
+Super Mario Bros/Library/
+Super Mario Bros/obj/Debug/
+Super Mario Bros/obj/Release/
+Super Mario Bros/Logs/
