@@ -14,7 +14,7 @@ public static class Extensions
         float radius = 0.25f;
         float distance = 0.375f;
 
-        RaycastHit2D hit = Physics2D.CircleCast(rigidbody.position, radius, direction, distance, layerMask);
+        RaycastHit2D hit = Physics2D.CircleCast(rigidbody.position, radius, direction.normalized, distance, layerMask);
         return hit.collider != null && hit.rigidbody != rigidbody;
     }
    
