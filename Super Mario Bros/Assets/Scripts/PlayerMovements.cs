@@ -63,10 +63,8 @@ public class PlayerMovements : MonoBehaviour
     private void ApplyGravity()
     {
         bool falling = velocity.y < 0f || !Input.GetButton("Jump");
-        Debug.Log("falling " + falling);
 
         float multiplier = falling ? 2f : 1f;
-        Debug.Log("multiplier " +  multiplier);
 
         velocity.y += gravity * multiplier * Time.deltaTime;
         velocity.y = Mathf.Max(velocity.y, gravity / 2f);
@@ -82,6 +80,17 @@ public class PlayerMovements : MonoBehaviour
         position.x = Mathf.Clamp(position.x, leftEdge.x + 1f, rightEdge.x - 0);
 
         rigidbody.MovePosition(position);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        {
+            if(transform.DotTest(collision.transform, Vector2.up))
+            {
+                velocity.y = 0f;
+            }
+        }
     }
 
 }
