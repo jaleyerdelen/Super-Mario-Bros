@@ -20,7 +20,7 @@ public static class Extensions
 
     public static bool DotTest(this Transform transform, Transform other, Vector2 testDirection)
     {
-        Vector2 direction = other.position - transform.position;
+        Vector2 direction = other.position - transform.position; //Head Collision
         //Debug.Log(transform.position); //Mario position
         return Vector2.Dot(direction.normalized, testDirection) > 0.25f;
     }
