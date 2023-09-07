@@ -50,6 +50,16 @@ public class PlayerMovements : MonoBehaviour
         if (rigidbody.Raycast(Vector2.right * velocity.x))
         {
             velocity.x = 0f;
+           
+        }
+
+        if (velocity.x > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+        } 
+        else if (velocity.x < 0f)
+        {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f); //direction to the left
         }
     }
 
